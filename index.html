@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سند صرف عهدة نقدية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="company-info">
+                <h2>شركة لوازم الغاز</h2>
+                <p>لأدوات الغاز والرحلات</p>
+                <p>س.ت: ٤٠٣٠٠٨٨٢٩٩</p>
+                <p>جدة - المملكة العربية السعودية</p>
+            </div>
+            <div class="logo">
+                <span>AMD</span>
+            </div>
+            <div class="company-info en">
+                <h2>Gas Accessories Co.</h2>
+                <p>For Gas tools & Trips</p>
+                <p>C.R. 4030088299</p>
+                <p>Jeddah - Saudi Arabia</p>
+            </div>
+        </div>
+        <h3 class="title">سند صرف عهدة نقدية</h3>
+        <form id="receiptForm">
+            <div class="form-row">
+                <div class="form-group small">
+                    <label for="amountNumber">المبلغ رقماً:</label>
+                    <input type="number" id="amountNumber" name="amountNumber" min="0" max="1000000"> ريالاً
+                </div>
+                <div class="form-group small">
+                    <label for="date">التاريخ:</label>
+                    <input type="text" id="date" name="date">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label for="amountInWords">المبلغ كتابة:</label>
+                    <input type="text" id="amountInWords" name="amountInWords" readonly>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label for="to">إلى السيد:</label>
+                    <input type="text" id="to" name="to" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group wide">
+                    <label for="for">وذلك مقابل:</label>
+                    <input type="text" id="for" name="for" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <p>تم صرف المبلغ بأمر من إدارة شركة لوازم الغاز</p>
+            </div>
+            <div class="form-row signatures">
+                <div class="signature">
+                    <label for="receiver">توقيع المستلم:</label>
+                    <input type="text" id="receiver" name="receiver">
+                </div>
+                <div class="signature">
+                    <label for="responsibleName">اسم مسؤول العهدة:</label>
+                    <input type="text" id="responsibleName" name="responsibleName">
+                </div>
+                 <div class="signature">
+                    <label for="responsibleSignature">توقيع مسؤول العهدة:</label>
+                    <input type="text" id="responsibleSignature" name="responsibleSignature">
+                </div>
+            </div>
+            <button type="button" onclick="printReceipt()">طباعة السند</button>
+        </form>
+        <div class="footer">
+            <p>E-mail: Lawazimalgas@gmail.com Phone: 012-6494443/6471670 0555020491</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#date", {
+            dateFormat: "d/m/Y",
+            locale: "en"
+        });
+    </script>
+</body>
+</html>
