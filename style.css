@@ -5,52 +5,7 @@ body {
     background-color: #f6f6f6;
     margin: 0;
     padding: 0;
-    font-size: 12pt; /* تحديد حجم الخط للصفحة بالكامل */
-}
-
-/* تحديد حجم الصفحة عند الطباعة */
-@media print {
-    @page {
-        size: 15cm 20cm; /* تحديد حجم الصفحة (العرض والارتفاع) */
-        margin: 2mm; /* تقليل الهوامش */
-    }
-
-    body {
-        -webkit-print-color-adjust: exact; /* ضمان طباعة الألوان بشكل صحيح */
-        print-color-adjust: exact;
-    }
-
-    .container {
-        box-shadow: none; /* إزالة الظلال عند الطباعة */
-        border: none; /* إزالة الحدود عند الطباعة */
-        max-width: 100%; /* ضمان أن الحاوية تتناسب مع حجم الصفحة */
-        padding: 30px; /* تحديد الهوامش الداخلية */
-        margin: 0; /* إزالة الهوامش من الحاوية */
-    }
-
-    .header {
-        border-bottom: 1px solid #ddd; /* إضافة خط سفلي لرأس الصفحة عند الطباعة */
-        padding: 5px; /* تقليل حجم رأس الصفحة عند الطباعة */
-        display: flex;
-        justify-content: space-between; /* توزيع العناصر أفقياً */
-        align-items: center; /* توسيط العناصر عمودياً */
-    }
-
-    .header h2,
-    .header p {
-        font-size: 0.8em; /* تصغير حجم الخط في رأس السند */
-        margin: 2px 0; /* تقليل الهوامش حول النصوص */
-    }
-
-    .logo {
-        width: 60px; /* تقليل حجم الشعار */
-        height: 60px; /* حجم الشعار */
-        font-size: 1em; /* حجم الخط */
-    }
-
-    button {
-        display: none; /* إخفاء زر الطباعة عند الطباعة */
-    }
+    font-size: 12pt;
 }
 
 .container {
@@ -64,21 +19,21 @@ body {
 }
 
 .header {
-    background-color: #f8f9fa; /* لون خلفية فاتح لرأس السند */
-    color: #007bff; /* لون أزرق للكلام في رأس السند */
+    background-color: #f8f9fa;
+    color: #007bff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px; /* تقليل المسافة أسفل الرأس */
-    padding: 10px; /* تقليل حجم رأس الصفحة */
-    border-radius: 8px 8px 0 0; /* تدوير الزوايا العلوية فقط */
-    border-bottom: 2px solid #007bff; /* إضافة خط أزرق سفلي */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 2px solid #007bff;
 }
 
 .header h2,
 .header p {
-    color: #007bff; /* لون أزرق للكلام في رأس السند */
-    font-size: 1em; /* حجم الخط في رأس السند */
+    color: #007bff;
+    font-size: 1em;
     margin: 2px 0;
 }
 
@@ -93,28 +48,28 @@ body {
 .logo {
     border: 2px solid #007bff;
     border-radius: 50%;
-    width: 60px; /* حجم الشعار */
-    height: 60px; /* حجم الشعار */
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1em; /* حجم الخط */
+    font-size: 1em;
     font-weight: bold;
-    color: #fff; /* لون الشعار */
-    background-color: #007bff; /* خلفية الشعار */
+    color: #fff;
+    background-color: #007bff;
 }
 
 .title {
     text-align: center;
-    margin-bottom: 10px; /* تقليل المسافة أسفل العنوان */
-    font-size: 1.2em; /* حجم الخط */
-    color: #343a40; /* لون العنوان */
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #343a40;
 }
 
 .form-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px; /* تقليل المسافة بين الصفوف */
+    margin-bottom: 5px;
 }
 
 .form-group {
@@ -122,61 +77,106 @@ body {
 }
 
 .form-group.small {
-    width: 32%; /* تعديل حجم الخانات الصغيرة */
-    display: flex; /* إضافة flexbox لتنسيق العناصر داخل المجموعة الصغيرة */
-    align-items: center; /* توسيط العناصر عمودياً */
+    width: 32%;
+    display: flex;
+    align-items: center;
 }
 
 label {
     display: block;
     font-weight: bold;
-    margin-bottom: 2px; /* تقليل المسافة أسفل التسميات */
-    color: #343a40; /* لون التسميات */
-    font-size: 10pt; /* حجم الخط */
+    margin-bottom: 2px;
+    color: #343a40;
+    font-size: 10pt;
 }
 
 input[type="number"],
 input[type="text"],
 input[type="date"] {
     width: 100%;
-    padding: 5px; /* تقليل المساحة الداخلية */
+    padding: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
-    box-sizing: border-box; /* مهم لجعل الحجم يشمل الحدود والحواشي */
-    text-align: right; /* محاذاة النص إلى اليمين في حقول الإدخال */
-    color: #495057; /* لون النص في الحقول */
-    font-size: 10pt; /* حجم الخط */
+    box-sizing: border-box;
+    text-align: right;
+    color: #495057;
+    font-size: 10pt;
 }
 
 button {
-    background-color: #28a745; /* لون أخضر للزر */
+    background-color: #28a745;
     color: white;
-    padding: 6px 10px; /* تقليل المساحة الداخلية للزر */
+    padding: 6px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.8em; /* تقليل حجم الخط */
-    margin-top: 10px; /* تقليل المسافة أعلى الزر */
+    font-size: 0.8em;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #218838; /* لون أخضر أغمق عند التحويم */
+    background-color: #218838;
 }
 
 .signatures {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px; /* تقليل المسافة أعلى التوقيعات */
+    margin-top: 10px;
 }
 
 .signature {
-    width: 30%; /* تعديل عرض خانة التوقيع */
+    width: 30%;
 }
 
 .footer {
     text-align: center;
-    margin-top: 10px; /* تقليل المسافة أعلى التذييل */
-    font-size: 0.9em; /* تقليل حجم الخط */
+    margin-top: 10px;
+    font-size: 0.9em;
     color: #555;
+}
+
+/* تحديد حجم الصفحة عند الطباعة */
+@media print {
+    @page {
+        size: 15cm 20cm;
+        margin: 2mm;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .container {
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+        padding: 30px;
+        margin: 0;
+    }
+
+    .header {
+        border-bottom: 1px solid #ddd;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header h2,
+    .header p {
+        font-size: 0.8em;
+        margin: 2px 0;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        font-size: 1em;
+    }
+
+    button {
+        display: none;
+    }
 }
