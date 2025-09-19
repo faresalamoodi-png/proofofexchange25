@@ -127,10 +127,6 @@ body {
     align-items: center; /* توسيط العناصر عمودياً */
 }
 
-.form-group.wide {
-    width: 100%;
-}
-
 label {
     display: block;
     font-weight: bold;
